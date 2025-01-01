@@ -1,3 +1,11 @@
+;yT8f$]WSnxj
+that's the password.
+
+apollo1@hesadoghesacow.com
+
+/home/chipmillerme/public_html/hesadoghesacow.com
+
+
 # apollo
 
 
