@@ -1,8 +1,15 @@
+v0: Original fun/comic version with death metal
+v1: Bon Iver folk-inspired version with dual song versions
+v2: Indie collection showcase with multiple genre interpretations (reggae, chill, slow, bass versions)
+v3: GWAR-energetic version with battle, war, and chaos interpretations
 
+File Structure Evolution:
+- Separated CSS and JS into assets folder
+- Organized versions into folders (folk/, indie/, gwarenergetic/)
+- Added Schema.org markup for better SEO
+- Improved accessibility features
 
-The new folder is gwarenergetic, Now:
-
-Create a new version of index.html: 
-make a backup of the current index.html file and name it v{x} where x is the last of the v{x} files.
-look at the folder that I gave you and create a new index file in the styler of that folder's prompt.txt file.
-make sure that this file also links to all of the mp3 and mp4 files in this project and looks at the history of their creation enough to integrate them into the main page.
+Deployment Changes:
+- Created deployment manifest
+- Added verification scripts
+- Prepared for merge with existing deployment system

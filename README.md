@@ -59,3 +59,47 @@ The humans laugh—they know I’m wise!
 (Singer) No, he's a dog!
 (Crowd) He's a cow!
 (Singer) He’s my dog, and he’s here right now!
+
+# Apollo's Musical Journey
+
+## Version History
+- v0: Original death metal version
+- v1: Folk interpretations
+- v2: Indie collection
+- v3: GWAR-energetic versions
+
+## Project Structure
+```
+/
+├── assets/
+│   ├── css/
+│   ├── js/
+│   └── images/
+├── folk/
+├── indie/
+├── gwarenergetic/
+└── versions/
+    ├── v0.html
+    ├── v1.html
+    └── v2.html
+```
+
+## Features
+- Responsive design
+- Accessibility improvements
+- SEO optimization
+- Multiple genre interpretations
+
+## Deployment
+- See deploy_manifest.txt for required files
+- Use verify-deploy.js to check deployment completeness
+- Deployment scripts in preparation for merge
+
+## Development
+- CSS and JS now modularized
+- Schema.org markup added
+- Improved audio player accessibility
+
+## Pending
+- Merge with existing deployment system
+- Integration with current FTP setup

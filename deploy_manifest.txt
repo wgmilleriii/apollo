@@ -6,6 +6,8 @@ v2.html
 death1.mp3
 NEWSONG.txt
 README.md
+prompt_history.txt
+prompts.txt
 
 # Asset directories
 assets/

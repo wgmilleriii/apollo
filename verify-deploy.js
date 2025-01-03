@@ -10,6 +10,8 @@ const requiredFiles = [
     'death1.mp3',
     'NEWSONG.txt',
     'README.md',
+    'prompt_history.txt',
+    'prompts.txt',
     
     // Assets
     'assets/css/style.css',

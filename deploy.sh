@@ -1,11 +1,14 @@
 #!/bin/bash
 
+# Load configuration
+source deploy.config
+
 # Create necessary directories
 mkdir -p dist/assets/{css,js,images}
 mkdir -p dist/{folk,indie,gwarenergetic}
 
 # Copy root files
-cp index.html v*.html death1.mp3 NEWSONG.txt README.md dist/
+cp index.html v*.html death1.mp3 NEWSONG.txt README.md prompt_history.txt prompts.txt dist/
 
 # Copy asset files
 cp assets/css/style.css dist/assets/css/
@@ -21,11 +24,16 @@ cp indie/*.{mp3,txt} dist/indie/
 # Copy gwarenergetic version files
 cp gwarenergetic/*.{mp3,txt} dist/gwarenergetic/
 
-# Verify deployment
-echo "Verifying deployment..."
+# Verify local deployment
+echo "Verifying local deployment..."
 find dist -type f
 
-# Optional: Create zip archive
+# Create zip archive (backup)
 zip -r apollo-site.zip dist/*
 
-echo "Deployment package created!" 
+# Upload via FTP
+echo "Uploading to FTP server..."
+cd dist
+find . -type f -exec curl -u "$FTP_USER:$FTP_PASS" --ftp-create-dirs -T {} ftp://$FTP_HOST$FTP_DIR/{} \;
+
+echo "Deployment complete!" 
