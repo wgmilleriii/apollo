@@ -1,0 +1,83 @@
+:root {
+    --blood-red: #ff0000;
+    --dark-metal: #1a1a1a;
+    --toxic-green: #39ff14;
+    --battle-gray: #2c2c2c;
+    --gore-highlight: #ff4444;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base styles */
+body {
+    background: var(--dark-metal);
+    color: #fff;
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Layout */
+.gore-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+/* Header */
+.metal-header {
+    text-align: center;
+    padding: 40px 0;
+    background: linear-gradient(45deg, var(--blood-red), var(--dark-metal));
+    position: relative;
+    overflow: hidden;
+    border-bottom: 3px solid var(--toxic-green);
+}
+
+/* Typography */
+h1 {
+    font-family: 'Metal Mania', cursive;
+    font-size: clamp(3rem, 10vw, 6rem);
+    text-transform: uppercase;
+    margin: 0;
+    color: var(--toxic-green);
+    text-shadow: 
+        0 0 10px var(--toxic-green),
+        0 0 20px var(--blood-red),
+        0 0 30px var(--blood-red);
+    animation: pulsate 2s infinite;
+}
+
+/* ... Rest of your existing CSS ... */
+
+/* Accessibility improvements */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Focus states */
+:focus {
+    outline: 3px solid var(--toxic-green);
+    outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+    .metal-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+} 

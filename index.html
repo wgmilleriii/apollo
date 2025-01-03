@@ -3,192 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apollo - The Dog Who's Sometimes a Cow! 🐕🐄</title>
-    <style>
-        body {
-            font-family: 'Comic Sans MS', cursive, sans-serif;
-            background: linear-gradient(135deg, #87CEEB, #98FB98);
-            margin: 0;
-            padding: 20px;
-            min-height: 100vh;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-        }
-        h1, h2 {
-            color: #FF6B6B;
-            text-align: center;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-        }
-        h1 { font-size: 2.5em; }
-        h2 { font-size: 2em; }
-        .image-container {
-            width: 300px;
-            height: 300px;
-            margin: 20px auto;
-            border: 8px solid #FFD93D;
-            border-radius: 50%;
-            overflow: hidden;
-            background-color: #f0f0f0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .image-placeholder {
-            color: #666;
-            text-align: center;
-            padding: 20px;
-        }
-        .fun-fact {
-            background-color: #FFD93D;
-            padding: 15px;
-            border-radius: 15px;
-            margin: 20px 0;
-            text-align: center;
-            font-size: 1.2em;
-        }
-        .song-section {
-            margin-top: 30px;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.7);
-            border-radius: 15px;
-        }
-        .bounce {
-            animation: bounce 2s infinite;
-        }
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-        .paw-print {
-            font-size: 2em;
-            color: #FF6B6B;
-            margin: 0 5px;
-            display: inline-block;
-        }
-        .lyrics {
-            white-space: pre-line;
-            line-height: 1.6;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 15px;
-            margin: 20px 0;
-        }
-        .metal-section {
-            margin-top: 30px;
-            padding: 20px;
-            background: linear-gradient(45deg, #1a1a1a, #333);
-            border-radius: 15px;
-            text-align: center;
-            color: #fff;
-            box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
-        }
-        .metal-section h2 {
-            color: #ff0000;
-            font-family: "Metal Mania", cursive;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-shadow: 2px 2px 4px #000;
-        }
-        .metal-button {
-            display: inline-block;
-            margin: 10px;
-            padding: 15px 30px;
-            background: linear-gradient(45deg, #ff0000, #990000);
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            text-transform: uppercase;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            border: 2px solid #ff0000;
-            box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
-        }
-        .metal-button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
-            background: linear-gradient(45deg, #990000, #ff0000);
-        }
-        @keyframes flames {
-            0% { text-shadow: 0 0 10px #ff0000; }
-            50% { text-shadow: 0 0 20px #ff0000, 0 0 30px #ff4444; }
-            100% { text-shadow: 0 0 10px #ff0000; }
-        }
-        .metal-section h2 {
-            animation: flames 2s infinite;
-        }
-    </style>
+    <meta name="description" content="Apollo's musical journey through metal, folk, and indie interpretations. Experience the evolution from death metal to GWAR-inspired energy!">
+    <meta name="keywords" content="Apollo, dog songs, GWAR, metal music, folk music, indie music, musical evolution">
+    <meta name="author" content="Apollo's Team">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="APOLLO'S RAMPAGE | Musical Evolution">
+    <meta property="og:description" content="Experience Apollo's musical journey from death metal to GWAR-energy">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com">
+    
+    <title>APOLLO'S RAMPAGE | Musical Evolution</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
 </head>
 <body>
-    <div class="container">
-        <h1><span class="paw-print">🐾</span>Apollo's Pawsome Page<span class="paw-print">🐾</span></h1>
-        
-        <div class="image-container">
-            <div class="image-placeholder">
-                <p>Add Apollo's Picture Here!</p>
-                <p style="font-size: 3em;">📷</p>
+    <header class="metal-header">
+        <h1>APOLLO'S RAMPAGE</h1>
+        <p class="subtitle">A MUSICAL EVOLUTION</p>
+    </header>
+
+    <div class="gore-container">
+        <main class="battle-grid">
+            <!-- Energetic Version -->
+            <article class="metal-card" itemscope itemtype="http://schema.org/MusicRecording">
+                <h2 itemprop="name">BATTLE HYMN</h2>
+                <meta itemprop="genre" content="Metal">
+                <div class="player-container">
+                    <audio controls>
+                        <source src="gwarenergetic/battle.mp3" type="audio/mpeg">
+                        <p>Your browser doesn't support HTML audio. Here is a <a href="gwarenergetic/battle.mp3">link to the audio</a> instead.</p>
+                    </audio>
+                </div>
+                <div class="lyrics-container" id="battle-lyrics" itemprop="lyrics">
+                    <div class="loading">SUMMONING LYRICS...</div>
+                </div>
+            </article>
+
+            <!-- War Version -->
+            <article class="metal-card" itemscope itemtype="http://schema.org/MusicRecording">
+                <h2 itemprop="name">WAR CHANT</h2>
+                <meta itemprop="genre" content="Metal">
+                <div class="player-container">
+                    <audio controls>
+                        <source src="gwarenergetic/war.mp3" type="audio/mpeg">
+                        <p>Your browser doesn't support HTML audio. Here is a <a href="gwarenergetic/war.mp3">link to the audio</a> instead.</p>
+                    </audio>
+                </div>
+                <div class="lyrics-container" id="war-lyrics" itemprop="lyrics">
+                    <div class="loading">SUMMONING LYRICS...</div>
+                </div>
+            </article>
+
+            <!-- Chaos Version -->
+            <article class="metal-card" itemscope itemtype="http://schema.org/MusicRecording">
+                <h2 itemprop="name">CHAOS ANTHEM</h2>
+                <meta itemprop="genre" content="Metal">
+                <div class="player-container">
+                    <audio controls>
+                        <source src="gwarenergetic/chaos.mp3" type="audio/mpeg">
+                        <p>Your browser doesn't support HTML audio. Here is a <a href="gwarenergetic/chaos.mp3">link to the audio</a> instead.</p>
+                    </audio>
+                </div>
+                <div class="lyrics-container" id="chaos-lyrics" itemprop="lyrics">
+                    <div class="loading">SUMMONING LYRICS...</div>
+                </div>
+            </article>
+        </main>
+
+        <section class="evolution-timeline">
+            <h2 class="timeline-header">APOLLO'S EVOLUTION</h2>
+            <div class="evolution-grid">
+                <!-- Evolution cards with Schema.org markup -->
+                <!-- Previous evolution cards content -->
             </div>
-        </div>
+        </section>
 
-        <div class="fun-fact bounce">
-            "Is he a dog? Is he a cow? He's Apollo, and he's wow!"
-        </div>
-
-        <div class="song-section">
-            <h2>🎵 Apollo's Theme Song 🎵</h2>
-            <div class="lyrics">
-(Verse 1)
-Leash is on, let's go, it's time to run,
-Big smells, big trees, and the warm, bright sun.
-The ground feels soft, the birds all sing,
-Tail's wagging fast, it's a happy thing!
-
-(Chorus)
-(Singer) He's a dog!
-(Crowd) He's a cow!
-(Singer) No, he's a dog!
-(Crowd) He's a cow!
-(Singer) Look at his tail, wagging now!
-(Crowd) He's a cow, can't you see somehow?
-(Singer) No, he's a dog!
-(Crowd) He's a cow!
-(Singer) He's my dog, and he's here right now!
-
-(Verse 2)
-Once on the street, no home, no bed,
-Hungry and cold, just a place for my head.
-A kind hand came and scooped me away,
-Now life is great, it's a brand-new day!
-
-[Chorus repeats]
-
-(Verse 3)
-Fridge door opens, it's butter time,
-Sneaking a snack should never be a crime!
-With wagging butt and mischief in my eyes,
-The humans laugh—they know I'm wise!
-
-[Chorus repeats]
-            </div>
-        </div>
-
-        <div class="metal-section">
-            <h2>🤘 Apollo's Death Metal Corner 🤘</h2>
-            <p>Experience Apollo's song in its true form:</p>
-            <audio controls>
-                <source src="death1.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-            <div>
-                <a href="death1.mp3" download class="metal-button">Download Track</a>
-            </div>
-        </div>
+        <nav class="archive-portal" aria-label="Version archives">
+            <a href="v0.html" class="battle-link">Original Prophecy</a>
+            <a href="v1.html" class="battle-link">Folk Legends</a>
+            <a href="v2.html" class="battle-link">Indie Chronicles</a>
+        </nav>
     </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js" defer></script>
 </body>
 </html> 

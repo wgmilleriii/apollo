@@ -1,0 +1,43 @@
+# Root files
+index.html
+v0.html
+v1.html
+v2.html
+death1.mp3
+NEWSONG.txt
+README.md
+
+# Asset directories
+assets/
+  css/
+    style.css
+  js/
+    main.js
+  images/
+    favicon.ico
+
+# Version-specific content
+folk/
+  version1.mp3
+  version2.mp3
+  NEWSONG.txt
+  NEWSONG2.txt
+
+indie/
+  reggae.mp3
+  chill.mp3
+  slow.mp3
+  bass.mp3
+  reggae.txt
+  chill.txt
+  slow.txt
+  bass.txt
+
+gwarenergetic/
+  battle.mp3
+  war.mp3
+  chaos.mp3
+  battle.txt
+  war.txt
+  chaos.txt
+  prompt.txt 
