@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APOLLO | Indie Collection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Space+Mono&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #1a1a1a;
+            color: #ffffff;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        h1 {
+            font-size: 3.5em;
+            margin: 0;
+            letter-spacing: 8px;
+            color: #fff;
+            font-weight: 600;
+        }
+        header p {
+            font-family: 'Space Mono', monospace;
+            font-size: 1.2em;
+            color: #888;
+            margin-top: 10px;
+            letter-spacing: 4px;
+        }
+        .versions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .version {
+            background: #2a2a2a;
+            padding: 25px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .version:hover {
+            transform: translateY(-5px);
+        }
+        h2 {
+            font-family: 'Space Mono', monospace;
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+            text-align: center;
+        }
+        audio, video {
+            width: 100%;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .media-info {
+            margin-top: 15px;
+            font-size: 0.9em;
+            color: #888;
+            text-align: center;
+        }
+        .navigation {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #333;
+        }
+        .nav-link {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 0 10px;
+            color: #fff;
+            text-decoration: none;
+            border: 2px solid #fff;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.9em;
+            letter-spacing: 1px;
+        }
+        .nav-link:hover {
+            background: #fff;
+            color: #1a1a1a;
+        }
+        .lyrics {
+            background: #2a2a2a;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 40px 0;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        .lyrics h3 {
+            color: #fff;
+            font-family: 'Space Mono', monospace;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2.5em;
+            }
+            .versions {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>APOLLO</h1>
+            <p>INDIE COLLECTION</p>
+        </header>
+        
+        <div class="versions">
+            <div class="version">
+                <h2>Reggae Version</h2>
+                <audio controls>
+                    <source src="Polka.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <video controls>
+                    <source src="Polka.mp4" type="video/mp4">
+                    Your browser does not support the video element.
+                </video>
+                <div class="media-info">Recorded Live at Sunset Studio</div>
+            </div>
+            <div class="version">
+                <h2>Chill Version</h2>
+                <audio controls>
+                    <source src="Death1.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <div class="media-info">Late Night Session</div>
+            </div>
+        </div>
+
+        <div class="lyrics">
+            <h3>INDIE INTERPRETATION</h3>
+            <p>
+                (Verse 1)<br>
+                In the city's morning haze,<br>
+                Apollo walks through urban maze.<br>
+                Some see a dog in morning light,<br>
+                Others see bovine delight.
+            </p>
+            <p>
+                (Chorus)<br>
+                Identity is what you make,<br>
+                In this world of give and take.<br>
+                Dog or cow, it's all the same,<br>
+                Apollo's spirit wild and untame.
+            </p>
+        </div>
+
+        <nav class="navigation">
+            <a href="index.html" class="nav-link">LATEST VERSION</a>
+            <a href="v0.html" class="nav-link">ORIGINAL VERSION</a>
+            <a href="v1.html" class="nav-link">FOLK EDITION</a>
+        </nav>
+    </div>
+</body>
+</html> 

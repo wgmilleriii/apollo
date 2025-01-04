@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apollo's musical journey through metal, folk, and indie interpretations. Experience the evolution from death metal to GWAR-inspired energy!">
+    <meta name="keywords" content="Apollo, dog songs, GWAR, metal music, folk music, indie music, musical evolution">
+    <meta name="author" content="Apollo's Team">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="APOLLO'S RAMPAGE | Musical Evolution">
+    <meta property="og:description" content="Experience Apollo's musical journey from death metal to GWAR-energy">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hesadoghesacow.com">
+    
+    <title>APOLLO'S RAMPAGE | Musical Evolution</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Metal+Mania&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-bg: #ffffff;
+            --secondary-bg: #f8f9fa;
+            --text-color: #333333;
+            --accent-color: #e74c3c;
+            --border-color: #dddddd;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: var(--primary-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .metal-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: var(--secondary-bg);
+            border-radius: 8px;
+        }
+
+        h1 {
+            font-family: 'Metal Mania', cursive;
+            font-size: 3em;
+            color: var(--accent-color);
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: var(--text-color);
+            margin-top: 10px;
+        }
+
+        .content-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .tab-button {
+            background: var(--secondary-bg);
+            color: var(--text-color);
+            border: 2px solid var(--accent-color);
+            padding: 12px 24px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .tab-button:hover, .tab-button.active {
+            background: var(--accent-color);
+            color: white;
+        }
+
+        .content-section {
+            display: none;
+            padding: 20px;
+            background: var(--primary-bg);
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        .section-title {
+            font-size: 2em;
+            color: var(--text-color);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .media-card {
+            background: var(--secondary-bg);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .media-title {
+            font-size: 1.5em;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        video {
+            width: 100%;
+            background: #000000;
+            border-radius: 4px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        audio {
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        .lyrics-content {
+            background: var(--secondary-bg);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        .archive-portal {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background: var(--secondary-bg);
+            border-radius: 8px;
+        }
+
+        .battle-link {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: transform 0.2s;
+            font-weight: bold;
+        }
+
+        .battle-link:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 2.2em;
+            }
+
+            .content-tabs {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .tab-button {
+                width: 100%;
+                margin: 5px 0;
+            }
+
+            .media-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="metal-header">
+            <h1>APOLLO'S RAMPAGE</h1>
+            <p class="subtitle">A MUSICAL EVOLUTION</p>
+        </header>
+
+        <div class="content-tabs">
+            <button class="tab-button active" onclick="showContent('videos')">MUSIC VIDEOS</button>
+            <button class="tab-button" onclick="showContent('songs')">AUDIO TRACKS</button>
+            <button class="tab-button" onclick="showContent('lyrics')">LYRICS</button>
+        </div>
+
+        <div id="videos" class="content-section active">
+            <h2 class="section-title">MUSIC VIDEOS</h2>
+            <div class="media-grid">
+                <!-- GWAR Energetic Versions -->
+                <div class="media-card">
+                    <h3 class="media-title">BATTLE HYMN</h3>
+                    <video controls>
+                        <source src="./gwarenergetic/battle.mp4" type="video/mp4">
+                        <p>Your browser doesn't support HTML video. Here is a <a href="./gwarenergetic/battle.mp4">link to the video</a> instead.</p>
+                    </video>
+                </div>
+                <div class="media-card">
+                    <h3 class="media-title">WAR CHANT</h3>
+                    <video controls>
+                        <source src="./gwarenergetic/war.mp4" type="video/mp4">
+                        <p>Your browser doesn't support HTML video. Here is a <a href="./gwarenergetic/war.mp4">link to the video</a> instead.</p>
+                    </video>
+                </div>
+                <div class="media-card">
+                    <h3 class="media-title">CHAOS ANTHEM</h3>
+                    <video controls>
+                        <source src="./gwarenergetic/chaos.mp4" type="video/mp4">
+                        <p>Your browser doesn't support HTML video. Here is a <a href="./gwarenergetic/chaos.mp4">link to the video</a> instead.</p>
+                    </video>
+                </div>
+
+                <!-- Original Versions -->
+                <div class="media-card">
+                    <h3 class="media-title">ORIGINAL POLKA</h3>
+                    <video controls>
+                        <source src="Polka.mp4" type="video/mp4">
+                        <p>Your browser doesn't support HTML video. Here is a <a href="Polka.mp4">link to the video</a> instead.</p>
+                    </video>
+                </div>
+
+                <!-- Indie Versions -->
+                <div class="media-card">
+                    <h3 class="media-title">INDIE VERSION 1</h3>
+                    <video controls>
+                        <source src="./indie/IndieApollo.mp4" type="video/mp4">
+                        <p>Your browser doesn't support HTML video. Here is a <a href="./indie/IndieApollo.mp4">link to the video</a> instead.</p>
+                    </video>
+                </div>
+                <div class="media-card">
+                    <h3 class="media-title">INDIE VERSION 2</h3>
+                    <video controls>
+                        <source src="./indie/IndieApollo (1).mp4" type="video/mp4">
+                        <p>Your browser doesn't support HTML video. Here is a <a href="./indie/IndieApollo (1).mp4">link to the video</a> instead.</p>
+                    </video>
+                </div>
+
+                <!-- Bon Iver Style Versions -->
+                <div class="media-card">
+                    <h3 class="media-title">BON IVER STYLE 1</h3>
+                    <video controls>
+                        <source src="./newsongz/Bonniever.mp4" type="video/mp4">
+                        <p>Your browser doesn't support HTML video. Here is a <a href="./newsongz/Bonniever.mp4">link to the video</a> instead.</p>
+                    </video>
+                </div>
+                <div class="media-card">
+                    <h3 class="media-title">BON IVER STYLE 2</h3>
+                    <video controls>
+                        <source src="./newsongz/Bonniever (1).mp4" type="video/mp4">
+                        <p>Your browser doesn't support HTML video. Here is a <a href="./newsongz/Bonniever (1).mp4">link to the video</a> instead.</p>
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <div id="songs" class="content-section">
+            <h2 class="section-title">AUDIO TRACKS</h2>
+            <div class="media-grid">
+                <!-- GWAR Energetic Versions -->
+                <div class="media-card">
+                    <h3 class="media-title">BATTLE HYMN</h3>
+                    <audio controls>
+                        <source src="./gwarenergetic/battle.mp3" type="audio/mpeg">
+                        <p>Your browser doesn't support HTML audio. Here is a <a href="./gwarenergetic/battle.mp3">link to the audio</a> instead.</p>
+                    </audio>
+                </div>
+                <div class="media-card">
+                    <h3 class="media-title">WAR CHANT</h3>
+                    <audio controls>
+                        <source src="./gwarenergetic/war.mp3" type="audio/mpeg">
+                        <p>Your browser doesn't support HTML audio. Here is a <a href="./gwarenergetic/war.mp3">link to the audio</a> instead.</p>
+                    </audio>
+                </div>
+                <div class="media-card">
+                    <h3 class="media-title">CHAOS ANTHEM</h3>
+                    <audio controls>
+                        <source src="./gwarenergetic/chaos.mp3" type="audio/mpeg">
+                        <p>Your browser doesn't support HTML audio. Here is a <a href="./gwarenergetic/chaos.mp3">link to the audio</a> instead.</p>
+                    </audio>
+                </div>
+
+                <!-- Original Versions -->
+                <div class="media-card">
+                    <h3 class="media-title">ORIGINAL POLKA</h3>
+                    <audio controls>
+                        <source src="Polka.mp3" type="audio/mpeg">
+                        <p>Your browser doesn't support HTML audio. Here is a <a href="Polka.mp3">link to the audio</a> instead.</p>
+                    </audio>
+                </div>
+                <div class="media-card">
+                    <h3 class="media-title">DEATH METAL</h3>
+                    <audio controls>
+                        <source src="Death1.mp3" type="audio/mpeg">
+                        <p>Your browser doesn't support HTML audio. Here is a <a href="Death1.mp3">link to the audio</a> instead.</p>
+                    </audio>
+                </div>
+
+                <!-- Indie Versions -->
+                <div class="media-card">
+                    <h3 class="media-title">INDIE VERSION 1</h3>
+                    <audio controls>
+                        <source src="./indie/IndieApollo.mp3" type="audio/mpeg">
+                        <p>Your browser doesn't support HTML audio. Here is a <a href="./indie/IndieApollo.mp3">link to the audio</a> instead.</p>
+                    </audio>
+                </div>
+                <div class="media-card">
+                    <h3 class="media-title">INDIE VERSION 2</h3>
+                    <audio controls>
+                        <source src="./indie/IndieApollo (1).mp3" type="audio/mpeg">
+                        <p>Your browser doesn't support HTML audio. Here is a <a href="./indie/IndieApollo (1).mp3">link to the audio</a> instead.</p>
+                    </audio>
+                </div>
+
+                <!-- Bon Iver Style Versions -->
+                <div class="media-card">
+                    <h3 class="media-title">BON IVER STYLE 1</h3>
+                    <audio controls>
+                        <source src="./newsongz/Bonniever.mp3" type="audio/mpeg">
+                        <p>Your browser doesn't support HTML audio. Here is a <a href="./newsongz/Bonniever.mp3">link to the audio</a> instead.</p>
+                    </audio>
+                </div>
+                <div class="media-card">
+                    <h3 class="media-title">BON IVER STYLE 2</h3>
+                    <audio controls>
+                        <source src="./newsongz/Bonniever (1).mp3" type="audio/mpeg">
+                        <p>Your browser doesn't support HTML audio. Here is a <a href="./newsongz/Bonniever (1).mp3">link to the audio</a> instead.</p>
+                    </audio>
+                </div>
+            </div>
+        </div>
+
+        <div id="lyrics" class="content-section">
+            <h2 class="section-title">LYRICS</h2>
+            <div class="media-grid">
+                <!-- GWAR Energetic Versions -->
+                <div class="media-card">
+                    <h3 class="media-title">BATTLE HYMN</h3>
+                    <div class="lyrics-content">
+                        <p>(Verse 1)</p>
+                        <p>Leash is on, let's go, it's time to run,<br>
+                        Big smells, big trees, and the warm, bright sun.<br>
+                        The ground feels soft, the birds all sing,<br>
+                        Tail's wagging fast, it's a happy thing!</p>
+
+                        <p>(Chorus)<br>
+                        (Singer) He's a dog!<br>
+                        (Crowd) He's a cow!<br>
+                        (Singer) No, he's a dog!<br>
+                        (Crowd) He's a cow!<br>
+                        (Singer) Look at his tail, wagging now!<br>
+                        (Crowd) He's a cow, can't you see somehow?<br>
+                        (Singer) No, he's a dog!<br>
+                        (Crowd) He's a cow!<br>
+                        (Singer) He's my dog, and he's here right now!</p>
+                    </div>
+                </div>
+
+                <!-- Death Metal Version -->
+                <div class="media-card">
+                    <h3 class="media-title">DEATH METAL EPIC</h3>
+                    <div class="lyrics-content">
+                        <p>(Verse 1)</p>
+                        <p>From the ashes of tranquility, his fluffy wrath ascends,<br>
+                        A doggy death machine, where cuddles mean the end!<br>
+                        Tiny paws of fury, with hamsters in berserk,<br>
+                        They ride atop bananas—don't question how it works!<br>
+                        The mountains crack in terror; the rivers turn to fluff,<br>
+                        You thought you'd seen destruction—but this is puppy stuff!</p>
+
+                        <p>(Chorus)<br>
+                        Apollo is a doggy, he is cute, cute, cute!<br>
+                        Chaos in his wagging tail, the point is moot!<br>
+                        Hamsters march behind him, fluffy troops en route!<br>
+                        Apollo is a doggy, he is cute, cute, cute!</p>
+
+                        <p>(Verse 2)<br>
+                        His eyes pierce through the cosmos, two stars ablaze with love,<br>
+                        But don't approach too closely—he'll chew your winter gloves!<br>
+                        Hamsters wielding toothpicks, their war cries loud and clear,<br>
+                        They ride on battle turtles, their destiny severe!<br>
+                        Guitars unleash destruction, the riffs a primal scream,<br>
+                        Apollo brings the snuggles to your darkest metal dream!</p>
+
+                        <p>(Breakdown)<br>
+                        HAMSTERS! Squeak their fury!<br>
+                        DOOM! On tiny wheels!<br>
+                        FLUFF! Annihilates your defenses,<br>
+                        Prepare for the feels!</p>
+
+                        <p>Apollo! But Apollo! But Apollo butts—<br>
+                        CUTE!<br>
+                        Apollo! But Apollo! But Apollo butts—<br>
+                        CUTE!<br>
+                        The wag! The fluff! The hamsters SCREECH!<br>
+                        Bow down to the dog of ultimate cuteness… UNLEASHED!</p>
+
+                        <p>(Verse 3)<br>
+                        Metalheads are sobbing; their tattoos start to melt,<br>
+                        Apollo claims their souls with one almighty yelp!<br>
+                        The hamsters ride tornadoes, the cheese supply is gone,<br>
+                        And somewhere in the chaos, Apollo sings along.<br>
+                        Villages are fluffy ruins, the skies rain bits of fur,<br>
+                        The world submits to cuddles, 'cause resistance is a blur!</p>
+
+                        <p>(Outro)<br>
+                        The metal fades to silence, except for hamster cheers,<br>
+                        Apollo sits triumphant, wagging through the years.<br>
+                        A single note of squeaking lingers in the night,<br>
+                        And the world forever bows to the doggy overlord's might.</p>
+                    </div>
+                </div>
+
+                <!-- Folk Version -->
+                <div class="media-card">
+                    <h3 class="media-title">FOLK INTERPRETATION</h3>
+                    <div class="lyrics-content">
+                        <p>(Verse 1)<br>
+                        Gentle breeze and morning light,<br>
+                        Apollo's tail wagging with delight.<br>
+                        Through meadows green and forests deep,<br>
+                        A spirit wild he'll always keep.</p>
+
+                        <p>(Chorus)<br>
+                        Some say he's a dog,<br>
+                        Others see a cow,<br>
+                        But in nature's song,<br>
+                        He's perfect anyhow.</p>
+                    </div>
+                </div>
+
+                <!-- War Chant -->
+                <div class="media-card">
+                    <h3 class="media-title">WAR CHANT</h3>
+                    <div class="lyrics-content">
+                        <p>(Verse 2)</p>
+                        <p>Once on the street, no home, no bed,<br>
+                        Hungry and cold, just a place for my head.<br>
+                        A kind hand came and scooped me away,<br>
+                        Now life is great, it's a brand-new day!</p>
+
+                        <p>(Chorus)<br>
+                        (Singer) He's a dog!<br>
+                        (Crowd) He's a cow!<br>
+                        (Singer) No, he's a dog!<br>
+                        (Crowd) He's a cow!<br>
+                        (Singer) Look at his tail, wagging now!<br>
+                        (Crowd) He's a cow, can't you see somehow?<br>
+                        (Singer) No, he's a dog!<br>
+                        (Crowd) He's a cow!<br>
+                        (Singer) He's my dog, and he's here right now!</p>
+                    </div>
+                </div>
+
+                <!-- Chaos Anthem -->
+                <div class="media-card">
+                    <h3 class="media-title">CHAOS ANTHEM</h3>
+                    <div class="lyrics-content">
+                        <p>(Verse 3)</p>
+                        <p>Fridge door opens, it's butter time,<br>
+                        Sneaking a snack should never be a crime!<br>
+                        With wagging butt and mischief in my eyes,<br>
+                        The humans laugh—they know I'm wise!</p>
+
+                        <p>(Chorus)<br>
+                        (Singer) He's a dog!<br>
+                        (Crowd) He's a cow!<br>
+                        (Singer) No, he's a dog!<br>
+                        (Crowd) He's a cow!<br>
+                        (Singer) Look at his tail, wagging now!<br>
+                        (Crowd) He's a cow, can't you see somehow?<br>
+                        (Singer) No, he's a dog!<br>
+                        (Crowd) He's a cow!<br>
+                        (Singer) He's my dog, and he's here right now!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="archive-portal" aria-label="Version archives">
+            <a href="./v0.html" class="battle-link">Original Prophecy</a>
+            <a href="./v1.html" class="battle-link">Folk Legends</a>
+            <a href="./v2.html" class="battle-link">Indie Chronicles</a>
+        </nav>
+    </div>
+
+    <script>
+        function showContent(contentId) {
+            // Hide all content sections
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Remove active class from all buttons
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.classList.remove('active');
+            });
+            
+            // Show selected content section
+            document.getElementById(contentId).classList.add('active');
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html> 

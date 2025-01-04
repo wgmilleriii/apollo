@@ -1,0 +1,328 @@
+{
+    "songs": {
+        "irish_pub_1": {
+            "likes": 234,
+            "interactions": [
+                {
+                    "timestamp": "2024-01-03T22:37:00Z",
+                    "browser": "Chrome",
+                    "platform": "Windows",
+                    "country": "Ireland"
+                },
+                {
+                    "timestamp": "2024-01-03T22:38:00Z",
+                    "browser": "Firefox",
+                    "platform": "MacOS",
+                    "country": "UK"
+                }
+            ]
+        },
+        "irish_pub_2": {
+            "likes": 223,
+            "interactions": [
+                {
+                    "timestamp": "2024-01-03T22:38:00Z",
+                    "browser": "Safari",
+                    "platform": "iOS",
+                    "country": "Ireland"
+                },
+                {
+                    "timestamp": "2024-01-03T22:39:00Z",
+                    "browser": "Chrome",
+                    "platform": "Android",
+                    "country": "Scotland"
+                }
+            ]
+        },
+        "norwegian_death_metal_1": {
+            "likes": 247,
+            "interactions": [
+                {
+                    "timestamp": "2024-01-03T12:00:00Z",
+                    "browser": "Chrome",
+                    "platform": "Windows",
+                    "country": "Norway"
+                },
+                {
+                    
+                    "timestamp": "2024-01-03T12:05:00Z",
+                    "browser": "Firefox",
+                    "platform": "MacOS",
+                    "country": "USA"
+                }
+            ]
+        },
+        "norwegian_death_metal_2": {
+            "likes": 232,
+            "interactions": [
+                {
+                    "timestamp": "2024-01-03T12:02:00Z",
+                    "browser": "Safari",
+                    "platform": "iOS",
+                    "country": "Sweden"
+                },
+                {
+                    "timestamp": "2024-01-03T12:07:00Z",
+                    "browser": "Chrome",
+                    "platform": "Android",
+                    "country": "Finland"
+                }
+            ]
+        },
+        "putting_version_1": {
+            "likes": 289,
+            "interactions": [
+                {
+                    "timestamp": "2024-01-03T12:01:00Z",
+                    "browser": "Edge",
+                    "platform": "Windows",
+                    "country": "UK"
+                },
+                {
+                    "timestamp": "2024-01-03T12:06:00Z",
+                    "browser": "Chrome",
+                    "platform": "Linux",
+                    "country": "Germany"
+                }
+            ]
+        },
+        "putting_version_2": {
+            "likes": 276,
+            "interactions": [
+                {
+                    "timestamp": "2024-01-03T12:03:00Z",
+                    "browser": "Firefox",
+                    "platform": "MacOS",
+                    "country": "Canada"
+                },
+                {
+                    "timestamp": "2024-01-03T12:08:00Z",
+                    "browser": "Safari",
+                    "platform": "iOS",
+                    "country": "Australia"
+                }
+            ]
+        },
+        "putting_version_3": {
+            "likes": 254,
+            "interactions": [
+                {
+                    "timestamp": "2024-01-03T12:04:00Z",
+                    "browser": "Chrome",
+                    "platform": "Windows",
+                    "country": "Japan"
+                },
+                {
+                    "timestamp": "2024-01-03T12:09:00Z",
+                    "browser": "Firefox",
+                    "platform": "Android",
+                    "country": "Brazil"
+                }
+            ]
+        },
+        "putting_version_4": {
+            "likes": 212,
+            "interactions": [
+                {
+                    "timestamp": "2024-01-03T12:10:00Z",
+                    "browser": "Safari",
+                    "platform": "MacOS",
+                    "country": "France"
+                },
+                {
+                    "timestamp": "2024-01-03T12:15:00Z",
+                    "browser": "Chrome",
+                    "platform": "Windows",
+                    "country": "Spain"
+                }
+            ]
+        },
+        "battle_hymn": {
+            "likes": 298,
+            "interactions": [
+                {
+                    "timestamp": "2024-01-02T15:00:00Z",
+                    "browser": "Chrome",
+                    "platform": "Windows",
+                    "country": "USA"
+                },
+                {
+                    "timestamp": "2024-01-02T15:30:00Z",
+                    "browser": "Firefox",
+                    "platform": "MacOS",
+                    "country": "Canada"
+                }
+            ]
+        },
+        "war_chant": {
+            "likes": 267,
+            "interactions": [
+                {
+                    "timestamp": "2024-01-02T16:00:00Z",
+                    "browser": "Safari",
+                    "platform": "iOS",
+                    "country": "UK"
+                },
+                {
+                    "timestamp": "2024-01-02T16:30:00Z",
+                    "browser": "Chrome",
+                    "platform": "Android",
+                    "country": "Australia"
+                }
+            ]
+        },
+        "chaos_anthem": {
+            "likes": 245,
+            "interactions": [
+                {
+                    "timestamp": "2024-01-02T17:00:00Z",
+                    "browser": "Edge",
+                    "platform": "Windows",
+                    "country": "Germany"
+                },
+                {
+                    "timestamp": "2024-01-02T17:30:00Z",
+                    "browser": "Chrome",
+                    "platform": "Linux",
+                    "country": "Netherlands"
+                }
+            ]
+        },
+        "indie_version_1": {
+            "likes": 234,
+            "interactions": [
+                {
+                    "timestamp": "2023-12-29T10:00:00Z",
+                    "browser": "Firefox",
+                    "platform": "MacOS",
+                    "country": "Sweden"
+                },
+                {
+                    "timestamp": "2023-12-29T10:30:00Z",
+                    "browser": "Chrome",
+                    "platform": "Windows",
+                    "country": "Denmark"
+                }
+            ]
+        },
+        "indie_version_2": {
+            "likes": 223,
+            "interactions": [
+                {
+                    "timestamp": "2023-12-29T11:00:00Z",
+                    "browser": "Safari",
+                    "platform": "iOS",
+                    "country": "Norway"
+                },
+                {
+                    "timestamp": "2023-12-29T11:30:00Z",
+                    "browser": "Chrome",
+                    "platform": "Android",
+                    "country": "Finland"
+                }
+            ]
+        },
+        "bon_iever_style_1": {
+            "likes": 256,
+            "interactions": [
+                {
+                    "timestamp": "2023-12-29T12:00:00Z",
+                    "browser": "Chrome",
+                    "platform": "Windows",
+                    "country": "France"
+                },
+                {
+                    "timestamp": "2023-12-29T12:30:00Z",
+                    "browser": "Firefox",
+                    "platform": "MacOS",
+                    "country": "Belgium"
+                }
+            ]
+        },
+        "bon_iever_style_2": {
+            "likes": 245,
+            "interactions": [
+                {
+                    "timestamp": "2023-12-29T13:00:00Z",
+                    "browser": "Safari",
+                    "platform": "iOS",
+                    "country": "Spain"
+                },
+                {
+                    "timestamp": "2023-12-29T13:30:00Z",
+                    "browser": "Chrome",
+                    "platform": "Android",
+                    "country": "Italy"
+                }
+            ]
+        },
+        "original_polka": {
+            "likes": 278,
+            "interactions": [
+                {
+                    "timestamp": "2023-12-29T14:00:00Z",
+                    "browser": "Edge",
+                    "platform": "Windows",
+                    "country": "Poland"
+                },
+                {
+                    "timestamp": "2023-12-29T14:30:00Z",
+                    "browser": "Chrome",
+                    "platform": "Linux",
+                    "country": "Czech Republic"
+                }
+            ]
+        },
+        "death_metal": {
+            "likes": 243,
+            "interactions": [
+                {
+                    "timestamp": "2023-12-29T15:00:00Z",
+                    "browser": "Chrome",
+                    "platform": "Windows",
+                    "country": "Germany"
+                },
+                {
+                    "timestamp": "2023-12-29T15:30:00Z",
+                    "browser": "Firefox",
+                    "platform": "MacOS",
+                    "country": "Austria"
+                }
+            ]
+        },
+        "death_metal_epic": {
+            "likes": 267,
+            "interactions": [
+                {
+                    "timestamp": "2023-12-29T16:00:00Z",
+                    "browser": "Safari",
+                    "platform": "iOS",
+                    "country": "Switzerland"
+                },
+                {
+                    "timestamp": "2023-12-29T16:30:00Z",
+                    "browser": "Chrome",
+                    "platform": "Android",
+                    "country": "Netherlands"
+                }
+            ]
+        },
+        "folk_interpretation": {
+            "likes": 234,
+            "interactions": [
+                {
+                    "timestamp": "2023-12-29T17:00:00Z",
+                    "browser": "Edge",
+                    "platform": "Windows",
+                    "country": "Ireland"
+                },
+                {
+                    "timestamp": "2023-12-29T17:30:00Z",
+                    "browser": "Chrome",
+                    "platform": "Linux",
+                    "country": "Scotland"
+                }
+            ]
+        }
+    }
+}

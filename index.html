@@ -11,91 +11,1213 @@
     <meta property="og:title" content="APOLLO'S RAMPAGE | Musical Evolution">
     <meta property="og:description" content="Experience Apollo's musical journey from death metal to GWAR-energy">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yourdomain.com">
+    <meta property="og:url" content="https://hesadoghesacow.com">
     
     <title>APOLLO'S RAMPAGE | Musical Evolution</title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Metal+Mania&display=swap" rel="stylesheet">
     
-    <!-- Styles -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <style>
+        :root {
+            --primary-bg: #ffffff;
+            --secondary-bg: #f8f9fa;
+            --text-color: #333333;
+            --accent-color: #e74c3c;
+            --border-color: #dddddd;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: var(--primary-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .metal-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: var(--secondary-bg);
+            border-radius: 8px;
+        }
+
+        h1 {
+            font-family: 'Metal Mania', cursive;
+            font-size: 3em;
+            color: var(--accent-color);
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: var(--text-color);
+            margin-top: 10px;
+        }
+
+        .content-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .tab-button {
+            background: var(--secondary-bg);
+            color: var(--text-color);
+            border: 2px solid var(--accent-color);
+            padding: 12px 24px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .tab-button:hover, .tab-button.active {
+            background: var(--accent-color);
+            color: white;
+        }
+
+        .content-section {
+            display: none;
+            padding: 20px;
+            background: var(--primary-bg);
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        .section-title {
+            font-size: 2em;
+            color: var(--text-color);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .media-card {
+            background: var(--secondary-bg);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .media-title {
+            font-size: 1.5em;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        video {
+            width: 100%;
+            background: #000000;
+            border-radius: 4px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        audio {
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        .lyrics-content {
+            background: var(--secondary-bg);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        .archive-portal {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background: var(--secondary-bg);
+            border-radius: 8px;
+        }
+
+        .battle-link {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: transform 0.2s;
+            font-weight: bold;
+        }
+
+        .battle-link:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 2.2em;
+            }
+
+            .content-tabs {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .tab-button {
+                width: 100%;
+                margin: 5px 0;
+            }
+
+            .media-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .genre-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .genre-button {
+            background: transparent;
+            color: var(--text-color);
+            border: 1px solid var(--accent-color);
+            padding: 8px 16px;
+            font-size: 0.9em;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .genre-button:hover, .genre-button.active {
+            background: var(--accent-color);
+            color: white;
+        }
+
+        .date-label {
+            display: block;
+            text-align: right;
+            font-size: 0.8em;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .section-description {
+            text-align: center;
+            color: var(--text-color);
+            margin: -10px 0 30px 0;
+            font-style: italic;
+        }
+
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .genre-section {
+            margin-bottom: 40px;
+        }
+
+        .genre-title {
+            color: var(--accent-color);
+            font-size: 1.5em;
+            margin: 30px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .like-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 15px;
+            gap: 12px;
+            padding: 5px;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .like-button {
+            background: transparent;
+            border: 2px solid var(--accent-color);
+            color: var(--accent-color);
+            padding: 8px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            font-size: 0.95em;
+        }
+
+        .like-button:hover {
+            background: var(--accent-color);
+            color: white;
+            transform: translateY(-1px);
+            box-shadow: 0 3px 8px rgba(231, 76, 60, 0.2);
+        }
+
+        .like-button.liked {
+            background: var(--accent-color);
+            color: white;
+        }
+
+        .like-count {
+            font-size: 1.1em;
+            color: var(--text-color);
+            min-width: 40px;
+            text-align: center;
+            font-weight: 600;
+            background: #f8f9fa;
+            padding: 6px 12px;
+            border-radius: 15px;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .media-footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .date-label {
+            display: inline-block;
+            text-align: center;
+            font-size: 0.85em;
+            color: #666;
+            background: #f8f9fa;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+    </style>
 </head>
 <body>
-    <header class="metal-header">
-        <h1>APOLLO'S RAMPAGE</h1>
-        <p class="subtitle">A MUSICAL EVOLUTION</p>
-    </header>
+    <div class="container">
+        <header class="metal-header">
+            <h1>APOLLO'S RAMPAGE</h1>
+            <p class="subtitle">A MUSICAL EVOLUTION</p>
+        </header>
 
-    <div class="gore-container">
-        <main class="battle-grid">
-            <!-- Energetic Version -->
-            <article class="metal-card" itemscope itemtype="http://schema.org/MusicRecording">
-                <h2 itemprop="name">BATTLE HYMN</h2>
-                <meta itemprop="genre" content="Metal">
-                <div class="player-container">
-                    <audio controls>
-                        <source src="gwarenergetic/battle.mp3" type="audio/mpeg">
-                        <p>Your browser doesn't support HTML audio. Here is a <a href="gwarenergetic/battle.mp3">link to the audio</a> instead.</p>
-                    </audio>
-                </div>
-                <div class="lyrics-container" id="battle-lyrics" itemprop="lyrics">
-                    <div class="loading">SUMMONING LYRICS...</div>
-                </div>
-            </article>
+        <div class="content-tabs">
+            <button class="tab-button active" onclick="showContent('videos')">MUSIC VIDEOS</button>
+            <button class="tab-button" onclick="showContent('songs')">AUDIO TRACKS</button>
+            <button class="tab-button" onclick="showContent('lyrics')">LYRICS</button>
+        </div>
 
-            <!-- War Version -->
-            <article class="metal-card" itemscope itemtype="http://schema.org/MusicRecording">
-                <h2 itemprop="name">WAR CHANT</h2>
-                <meta itemprop="genre" content="Metal">
-                <div class="player-container">
-                    <audio controls>
-                        <source src="gwarenergetic/war.mp3" type="audio/mpeg">
-                        <p>Your browser doesn't support HTML audio. Here is a <a href="gwarenergetic/war.mp3">link to the audio</a> instead.</p>
-                    </audio>
-                </div>
-                <div class="lyrics-container" id="war-lyrics" itemprop="lyrics">
-                    <div class="loading">SUMMONING LYRICS...</div>
-                </div>
-            </article>
+        <div id="videos" class="content-section active">
+            <h2 class="section-title">MUSIC VIDEOS</h2>
 
-            <!-- Chaos Version -->
-            <article class="metal-card" itemscope itemtype="http://schema.org/MusicRecording">
-                <h2 itemprop="name">CHAOS ANTHEM</h2>
-                <meta itemprop="genre" content="Metal">
-                <div class="player-container">
-                    <audio controls>
-                        <source src="gwarenergetic/chaos.mp3" type="audio/mpeg">
-                        <p>Your browser doesn't support HTML audio. Here is a <a href="gwarenergetic/chaos.mp3">link to the audio</a> instead.</p>
-                    </audio>
-                </div>
-                <div class="lyrics-container" id="chaos-lyrics" itemprop="lyrics">
-                    <div class="loading">SUMMONING LYRICS...</div>
-                </div>
-            </article>
-        </main>
-
-        <section class="evolution-timeline">
-            <h2 class="timeline-header">APOLLO'S EVOLUTION</h2>
-            <div class="evolution-grid">
-                <!-- Evolution cards with Schema.org markup -->
-                <!-- Previous evolution cards content -->
+            <div class="genre-tabs">
+                <button class="genre-button active" onclick="filterGenre('all')">ALL</button>
+                <button class="genre-button" onclick="filterGenre('norwegian')">NORWEGIAN METAL</button>
+                <button class="genre-button" onclick="filterGenre('putting')">PUTTING</button>
+                <button class="genre-button" onclick="filterGenre('gwar')">GWAR</button>
+                <button class="genre-button" onclick="filterGenre('indie')">INDIE</button>
+                <button class="genre-button" onclick="filterGenre('folk')">FOLK</button>
+                <button class="genre-button" onclick="filterGenre('irish')">IRISH PUB</button>
             </div>
-        </section>
 
-        <nav class="archive-portal" aria-label="Version archives">
-            <a href="v0.html" class="battle-link">Original Prophecy</a>
-            <a href="v1.html" class="battle-link">Folk Legends</a>
-            <a href="v2.html" class="battle-link">Indie Chronicles</a>
-        </nav>
+            <div class="media-grid">
+                <!-- January 3rd, 2024 -->
+                <div class="media-card" data-genre="norwegian">
+                    <h3 class="media-title">NORWEGIAN DEATH METAL I</h3>
+                    <video controls>
+                        <source src="./jan3/Norwegian death metal.mp4" type="video/mp4">
+                        <p>Your browser doesn't support HTML video.</p>
+                    </video>
+                    <div class="media-footer">
+                        <div class="like-container">
+                            <button class="like-button" data-song-id="norwegian_death_metal_1" onclick="handleLike(this)">
+                                ❤️ <span class="like-text">Like</span>
+                            </button>
+                            <span class="like-count">0</span>
+                        </div>
+                        <span class="date-label">January 3, 2024</span>
+                    </div>
+                </div>
+
+                <div class="media-card" data-genre="norwegian">
+                    <h3 class="media-title">NORWEGIAN DEATH METAL II</h3>
+                    <video controls>
+                        <source src="./jan3/Norwegian death metal (1).mp4" type="video/mp4">
+                        <p>Your browser doesn't support HTML video.</p>
+                    </video>
+                    <div class="media-footer">
+                        <div class="like-container">
+                            <button class="like-button" data-song-id="norwegian_death_metal_2" onclick="handleLike(this)">
+                                ❤️ <span class="like-text">Like</span>
+                            </button>
+                            <span class="like-count">0</span>
+                        </div>
+                        <span class="date-label">January 3, 2024</span>
+                    </div>
+                </div>
+
+                <div class="media-card" data-genre="putting">
+                    <h3 class="media-title">PUTTING VERSION I</h3>
+                    <video controls>
+                        <source src="./jan3/Putting1.mp4" type="video/mp4">
+                        <p>Your browser doesn't support HTML video.</p>
+                    </video>
+                    <div class="media-footer">
+                        <div class="like-container">
+                            <button class="like-button" data-song-id="putting_version_1" onclick="handleLike(this)">
+                                ❤️ <span class="like-text">Like</span>
+                            </button>
+                            <span class="like-count">0</span>
+                        </div>
+                        <span class="date-label">January 3, 2024</span>
+                    </div>
+                </div>
+
+                <div class="media-card" data-genre="putting">
+                    <h3 class="media-title">PUTTING VERSION II</h3>
+                    <video controls>
+                        <source src="./jan3/Putting1 (1).mp4" type="video/mp4">
+                        <p>Your browser doesn't support HTML video.</p>
+                    </video>
+                    <div class="media-footer">
+                        <div class="like-container">
+                            <button class="like-button" data-song-id="putting_version_2" onclick="handleLike(this)">
+                                ❤️ <span class="like-text">Like</span>
+                            </button>
+                            <span class="like-count">0</span>
+                        </div>
+                        <span class="date-label">January 3, 2024</span>
+                    </div>
+                </div>
+
+                <div class="media-card" data-genre="putting">
+                    <h3 class="media-title">PUTTING VERSION III</h3>
+                    <video controls>
+                        <source src="./jan3/Putting2 (1).mp4" type="video/mp4">
+                        <p>Your browser doesn't support HTML video.</p>
+                    </video>
+                    <div class="media-footer">
+                        <div class="like-container">
+                            <button class="like-button" data-song-id="putting_version_3" onclick="handleLike(this)">
+                                ❤️ <span class="like-text">Like</span>
+                            </button>
+                            <span class="like-count">0</span>
+                        </div>
+                        <span class="date-label">January 3, 2024</span>
+                    </div>
+                </div>
+
+                <div class="media-card" data-genre="putting">
+                    <h3 class="media-title">PUTTING VERSION IV</h3>
+                    <video controls>
+                        <source src="./jan3/Putting2 (4).mp4" type="video/mp4">
+                        <p>Your browser doesn't support HTML video.</p>
+                    </video>
+                    <div class="media-footer">
+                        <div class="like-container">
+                            <button class="like-button" data-song-id="putting_version_4" onclick="handleLike(this)">
+                                ❤️ <span class="like-text">Like</span>
+                            </button>
+                            <span class="like-count">0</span>
+                        </div>
+                        <span class="date-label">January 3, 2024</span>
+                    </div>
+                </div>
+
+                <!-- GWAR Versions -->
+                <div class="media-card" data-genre="gwar">
+                    <h3 class="media-title">BATTLE HYMN</h3>
+                    <video controls>
+                        <source src="./gwarenergetic/battle.mp4" type="video/mp4">
+                        <p>Your browser doesn't support HTML video.</p>
+                    </video>
+                    <div class="media-footer">
+                        <div class="like-container">
+                            <button class="like-button" data-song-id="battle_hymn" onclick="handleLike(this)">
+                                ❤️ <span class="like-text">Like</span>
+                            </button>
+                            <span class="like-count">0</span>
+                        </div>
+                        <span class="date-label">January 2, 2024</span>
+                    </div>
+                </div>
+
+                <div class="media-card" data-genre="gwar">
+                    <h3 class="media-title">WAR CHANT</h3>
+                    <video controls>
+                        <source src="./gwarenergetic/war.mp4" type="video/mp4">
+                        <p>Your browser doesn't support HTML video.</p>
+                    </video>
+                    <div class="media-footer">
+                        <div class="like-container">
+                            <button class="like-button" data-song-id="war_chant" onclick="handleLike(this)">
+                                ❤️ <span class="like-text">Like</span>
+                            </button>
+                            <span class="like-count">0</span>
+                        </div>
+                        <span class="date-label">January 2, 2024</span>
+                    </div>
+                </div>
+
+                <div class="media-card" data-genre="gwar">
+                    <h3 class="media-title">CHAOS ANTHEM</h3>
+                    <video controls>
+                        <source src="./gwarenergetic/chaos.mp4" type="video/mp4">
+                        <p>Your browser doesn't support HTML video.</p>
+                    </video>
+                    <div class="media-footer">
+                        <div class="like-container">
+                            <button class="like-button" data-song-id="chaos_anthem" onclick="handleLike(this)">
+                                ❤️ <span class="like-text">Like</span>
+                            </button>
+                            <span class="like-count">0</span>
+                        </div>
+                        <span class="date-label">January 2, 2024</span>
+                    </div>
+                </div>
+
+                <!-- Indie & Folk Versions -->
+                <div class="media-card" data-genre="indie">
+                    <h3 class="media-title">INDIE VERSION 1</h3>
+                    <video controls>
+                        <source src="./indie/IndieApollo.mp4" type="video/mp4">
+                        <p>Your browser doesn't support HTML video.</p>
+                    </video>
+                    <div class="media-footer">
+                        <div class="like-container">
+                            <button class="like-button" data-song-id="indie_version_1" onclick="handleLike(this)">
+                                ❤️ <span class="like-text">Like</span>
+                            </button>
+                            <span class="like-count">0</span>
+                        </div>
+                        <span class="date-label">December 29, 2023</span>
+                    </div>
+                </div>
+
+                <div class="media-card" data-genre="indie">
+                    <h3 class="media-title">INDIE VERSION 2</h3>
+                    <video controls>
+                        <source src="./indie/IndieApollo (1).mp4" type="video/mp4">
+                        <p>Your browser doesn't support HTML video.</p>
+                    </video>
+                    <div class="media-footer">
+                        <div class="like-container">
+                            <button class="like-button" data-song-id="indie_version_2" onclick="handleLike(this)">
+                                ❤️ <span class="like-text">Like</span>
+                            </button>
+                            <span class="like-count">0</span>
+                        </div>
+                        <span class="date-label">December 29, 2023</span>
+                    </div>
+                </div>
+
+                <div class="media-card" data-genre="folk">
+                    <h3 class="media-title">BON IVER STYLE 1</h3>
+                    <video controls>
+                        <source src="./newsongz/Bonniever.mp4" type="video/mp4">
+                        <p>Your browser doesn't support HTML video.</p>
+                    </video>
+                    <div class="media-footer">
+                        <div class="like-container">
+                            <button class="like-button" data-song-id="bon_iever_style_1" onclick="handleLike(this)">
+                                ❤️ <span class="like-text">Like</span>
+                            </button>
+                            <span class="like-count">0</span>
+                        </div>
+                        <span class="date-label">December 29, 2023</span>
+                    </div>
+                </div>
+
+                <div class="media-card" data-genre="folk">
+                    <h3 class="media-title">BON IVER STYLE 2</h3>
+                    <video controls>
+                        <source src="./newsongz/Bonniever (1).mp4" type="video/mp4">
+                        <p>Your browser doesn't support HTML video.</p>
+                    </video>
+                    <div class="media-footer">
+                        <div class="like-container">
+                            <button class="like-button" data-song-id="bon_iever_style_2" onclick="handleLike(this)">
+                                ❤️ <span class="like-text">Like</span>
+                            </button>
+                            <span class="like-count">0</span>
+                        </div>
+                        <span class="date-label">December 29, 2023</span>
+                    </div>
+                </div>
+
+                <!-- Original Version -->
+                <div class="media-card" data-genre="folk">
+                    <h3 class="media-title">ORIGINAL POLKA</h3>
+                    <video controls>
+                        <source src="Polka.mp4" type="video/mp4">
+                        <p>Your browser doesn't support HTML video.</p>
+                    </video>
+                    <div class="media-footer">
+                        <div class="like-container">
+                            <button class="like-button" data-song-id="original_polka" onclick="handleLike(this)">
+                                ❤️ <span class="like-text">Like</span>
+                            </button>
+                            <span class="like-count">0</span>
+                        </div>
+                        <span class="date-label">December 29, 2023</span>
+                    </div>
+                </div>
+
+                <!-- Irish Pub Versions - January 3rd, 2024 -->
+                <div class="media-card" data-genre="irish">
+                    <h3 class="media-title">IRISH PUB VERSION I</h3>
+                    <video controls>
+                        <source src="./irishpub/Apollo.mp4" type="video/mp4">
+                        <p>Your browser doesn't support HTML video.</p>
+                    </video>
+                    <div class="media-footer">
+                        <div class="like-container">
+                            <button class="like-button" data-song-id="irish_pub_1" onclick="handleLike(this)">
+                                ❤️ <span class="like-text">Like</span>
+                            </button>
+                            <span class="like-count">0</span>
+                        </div>
+                        <span class="date-label">January 3, 2024</span>
+                    </div>
+                </div>
+
+                <div class="media-card" data-genre="irish">
+                    <h3 class="media-title">IRISH PUB VERSION II</h3>
+                    <video controls>
+                        <source src="./irishpub/Apollo (1).mp4" type="video/mp4">
+                        <p>Your browser doesn't support HTML video.</p>
+                    </video>
+                    <div class="media-footer">
+                        <div class="like-container">
+                            <button class="like-button" data-song-id="irish_pub_2" onclick="handleLike(this)">
+                                ❤️ <span class="like-text">Like</span>
+                            </button>
+                            <span class="like-count">0</span>
+                        </div>
+                        <span class="date-label">January 3, 2024</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="songs" class="content-section">
+            <h2 class="section-title">AUDIO TRACKS</h2>
+            <div class="media-grid">
+                <!-- GWAR Energetic Versions -->
+                <div class="media-card">
+                    <h3 class="media-title">BATTLE HYMN</h3>
+                    <audio controls>
+                        <source src="./gwarenergetic/battle.mp3" type="audio/mpeg">
+                        <p>Your browser doesn't support HTML audio. Here is a <a href="./gwarenergetic/battle.mp3">link to the audio</a> instead.</p>
+                    </audio>
+                    <div class="media-footer">
+                        <div class="like-container">
+                            <button class="like-button" data-song-id="battle_hymn" onclick="handleLike(this)">
+                                ❤️ <span class="like-text">Like</span>
+                            </button>
+                            <span class="like-count">0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <h3 class="media-title">WAR CHANT</h3>
+                    <audio controls>
+                        <source src="./gwarenergetic/war.mp3" type="audio/mpeg">
+                        <p>Your browser doesn't support HTML audio. Here is a <a href="./gwarenergetic/war.mp3">link to the audio</a> instead.</p>
+                    </audio>
+                    <div class="media-footer">
+                        <div class="like-container">
+                            <button class="like-button" data-song-id="war_chant" onclick="handleLike(this)">
+                                ❤️ <span class="like-text">Like</span>
+                            </button>
+                            <span class="like-count">0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <h3 class="media-title">CHAOS ANTHEM</h3>
+                    <audio controls>
+                        <source src="./gwarenergetic/chaos.mp3" type="audio/mpeg">
+                        <p>Your browser doesn't support HTML audio. Here is a <a href="./gwarenergetic/chaos.mp3">link to the audio</a> instead.</p>
+                    </audio>
+                    <div class="media-footer">
+                        <div class="like-container">
+                            <button class="like-button" data-song-id="chaos_anthem" onclick="handleLike(this)">
+                                ❤️ <span class="like-text">Like</span>
+                            </button>
+                            <span class="like-count">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Original Versions -->
+                <div class="media-card">
+                    <h3 class="media-title">ORIGINAL POLKA</h3>
+                    <audio controls>
+                        <source src="Polka.mp3" type="audio/mpeg">
+                        <p>Your browser doesn't support HTML audio. Here is a <a href="Polka.mp3">link to the audio</a> instead.</p>
+                    </audio>
+                    <div class="media-footer">
+                        <div class="like-container">
+                            <button class="like-button" data-song-id="original_polka" onclick="handleLike(this)">
+                                ❤️ <span class="like-text">Like</span>
+                            </button>
+                            <span class="like-count">0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <h3 class="media-title">DEATH METAL</h3>
+                    <audio controls>
+                        <source src="Death1.mp3" type="audio/mpeg">
+                        <p>Your browser doesn't support HTML audio. Here is a <a href="Death1.mp3">link to the audio</a> instead.</p>
+                    </audio>
+                    <div class="media-footer">
+                        <div class="like-container">
+                            <button class="like-button" data-song-id="death_metal" onclick="handleLike(this)">
+                                ❤️ <span class="like-text">Like</span>
+                            </button>
+                            <span class="like-count">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Indie Versions -->
+                <div class="media-card">
+                    <h3 class="media-title">INDIE VERSION 1</h3>
+                    <audio controls>
+                        <source src="./indie/IndieApollo.mp3" type="audio/mpeg">
+                        <p>Your browser doesn't support HTML audio. Here is a <a href="./indie/IndieApollo.mp3">link to the audio</a> instead.</p>
+                    </audio>
+                    <div class="media-footer">
+                        <div class="like-container">
+                            <button class="like-button" data-song-id="indie_version_1" onclick="handleLike(this)">
+                                ❤️ <span class="like-text">Like</span>
+                            </button>
+                            <span class="like-count">0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <h3 class="media-title">INDIE VERSION 2</h3>
+                    <audio controls>
+                        <source src="./indie/IndieApollo (1).mp3" type="audio/mpeg">
+                        <p>Your browser doesn't support HTML audio. Here is a <a href="./indie/IndieApollo (1).mp3">link to the audio</a> instead.</p>
+                    </audio>
+                    <div class="media-footer">
+                        <div class="like-container">
+                            <button class="like-button" data-song-id="indie_version_2" onclick="handleLike(this)">
+                                ❤️ <span class="like-text">Like</span>
+                            </button>
+                            <span class="like-count">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bon Iver Style Versions -->
+                <div class="media-card">
+                    <h3 class="media-title">BON IVER STYLE 1</h3>
+                    <audio controls>
+                        <source src="./newsongz/Bonniever.mp3" type="audio/mpeg">
+                        <p>Your browser doesn't support HTML audio. Here is a <a href="./newsongz/Bonniever.mp3">link to the audio</a> instead.</p>
+                    </audio>
+                    <div class="media-footer">
+                        <div class="like-container">
+                            <button class="like-button" data-song-id="bon_iever_style_1" onclick="handleLike(this)">
+                                ❤️ <span class="like-text">Like</span>
+                            </button>
+                            <span class="like-count">0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <h3 class="media-title">BON IVER STYLE 2</h3>
+                    <audio controls>
+                        <source src="./newsongz/Bonniever (1).mp3" type="audio/mpeg">
+                        <p>Your browser doesn't support HTML audio. Here is a <a href="./newsongz/Bonniever (1).mp3">link to the audio</a> instead.</p>
+                    </audio>
+                    <div class="media-footer">
+                        <div class="like-container">
+                            <button class="like-button" data-song-id="bon_iever_style_2" onclick="handleLike(this)">
+                                ❤️ <span class="like-text">Like</span>
+                            </button>
+                            <span class="like-count">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Norwegian Death Metal Versions -->
+                <div class="media-card">
+                    <h3 class="media-title">NORWEGIAN DEATH METAL I</h3>
+                    <audio controls>
+                        <source src="./jan3/Norwegian death metal.mp3" type="audio/mpeg">
+                        <p>Your browser doesn't support HTML audio. Here is a <a href="./jan3/Norwegian death metal.mp3">link to the audio</a> instead.</p>
+                    </audio>
+                    <div class="media-footer">
+                        <div class="like-container">
+                            <button class="like-button" data-song-id="norwegian_death_metal_1" onclick="handleLike(this)">
+                                ❤️ <span class="like-text">Like</span>
+                            </button>
+                            <span class="like-count">0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <h3 class="media-title">NORWEGIAN DEATH METAL II</h3>
+                    <audio controls>
+                        <source src="./jan3/Norwegian death metal (1).mp3" type="audio/mpeg">
+                        <p>Your browser doesn't support HTML audio. Here is a <a href="./jan3/Norwegian death metal (1).mp3">link to the audio</a> instead.</p>
+                    </audio>
+                    <div class="media-footer">
+                        <div class="like-container">
+                            <button class="like-button" data-song-id="norwegian_death_metal_2" onclick="handleLike(this)">
+                                ❤️ <span class="like-text">Like</span>
+                            </button>
+                            <span class="like-count">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Putting Versions -->
+                <div class="media-card">
+                    <h3 class="media-title">PUTTING VERSION I</h3>
+                    <audio controls>
+                        <source src="./jan3/Putting1.mp3" type="audio/mpeg">
+                        <p>Your browser doesn't support HTML audio. Here is a <a href="./jan3/Putting1.mp3">link to the audio</a> instead.</p>
+                    </audio>
+                    <div class="media-footer">
+                        <div class="like-container">
+                            <button class="like-button" data-song-id="putting_version_1" onclick="handleLike(this)">
+                                ❤️ <span class="like-text">Like</span>
+                            </button>
+                            <span class="like-count">0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <h3 class="media-title">PUTTING VERSION II</h3>
+                    <audio controls>
+                        <source src="./jan3/Putting1 (1).mp3" type="audio/mpeg">
+                        <p>Your browser doesn't support HTML audio. Here is a <a href="./jan3/Putting1 (1).mp3">link to the audio</a> instead.</p>
+                    </audio>
+                    <div class="media-footer">
+                        <div class="like-container">
+                            <button class="like-button" data-song-id="putting_version_2" onclick="handleLike(this)">
+                                ❤️ <span class="like-text">Like</span>
+                            </button>
+                            <span class="like-count">0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <h3 class="media-title">PUTTING VERSION III</h3>
+                    <audio controls>
+                        <source src="./jan3/Putting2 (1).mp3" type="audio/mpeg">
+                        <p>Your browser doesn't support HTML audio. Here is a <a href="./jan3/Putting2 (1).mp3">link to the audio</a> instead.</p>
+                    </audio>
+                    <div class="media-footer">
+                        <div class="like-container">
+                            <button class="like-button" data-song-id="putting_version_3" onclick="handleLike(this)">
+                                ❤️ <span class="like-text">Like</span>
+                            </button>
+                            <span class="like-count">0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="media-card">
+                    <h3 class="media-title">PUTTING VERSION IV</h3>
+                    <audio controls>
+                        <source src="./jan3/Putting2 (4).mp3" type="audio/mpeg">
+                        <p>Your browser doesn't support HTML audio.</p>
+                    </audio>
+                    <div class="media-footer">
+                        <div class="like-container">
+                            <button class="like-button" data-song-id="putting_version_4" onclick="handleLike(this)">
+                                ❤️ <span class="like-text">Like</span>
+                            </button>
+                            <span class="like-count">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Irish Pub Versions -->
+                <div class="media-card">
+                    <h3 class="media-title">IRISH PUB VERSION I</h3>
+                    <audio controls>
+                        <source src="./irishpub/Apollo.mp3" type="audio/mpeg">
+                        <p>Your browser doesn't support HTML audio. Here is a <a href="./irishpub/Apollo.mp3">link to the audio</a> instead.</p>
+                    </audio>
+                    <div class="media-footer">
+                        <div class="like-container">
+                            <button class="like-button" data-song-id="irish_pub_1" onclick="handleLike(this)">
+                                ❤️ <span class="like-text">Like</span>
+                            </button>
+                            <span class="like-count">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="media-card">
+                    <h3 class="media-title">IRISH PUB VERSION II</h3>
+                    <audio controls>
+                        <source src="./irishpub/Apollo (1).mp3" type="audio/mpeg">
+                        <p>Your browser doesn't support HTML audio. Here is a <a href="./irishpub/Apollo (1).mp3">link to the audio</a> instead.</p>
+                    </audio>
+                    <div class="media-footer">
+                        <div class="like-container">
+                            <button class="like-button" data-song-id="irish_pub_2" onclick="handleLike(this)">
+                                ❤️ <span class="like-text">Like</span>
+                            </button>
+                            <span class="like-count">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="lyrics" class="content-section">
+            <h2 class="section-title">LYRICS</h2>
+            <div class="media-grid">
+                <!-- GWAR Energetic Versions -->
+                <div class="media-card">
+                    <h3 class="media-title">BATTLE HYMN</h3>
+                    <div class="lyrics-content">
+                        <p>(Verse 1)</p>
+                        <p>Leash is on, let's go, it's time to run,<br>
+                        Big smells, big trees, and the warm, bright sun.<br>
+                        The ground feels soft, the birds all sing,<br>
+                        Tail's wagging fast, it's a happy thing!</p>
+
+                        <p>(Chorus)<br>
+                        (Singer) He's a dog!<br>
+                        (Crowd) He's a cow!<br>
+                        (Singer) No, he's a dog!<br>
+                        (Crowd) He's a cow!<br>
+                        (Singer) Look at his tail, wagging now!<br>
+                        (Crowd) He's a cow, can't you see somehow?<br>
+                        (Singer) No, he's a dog!<br>
+                        (Crowd) He's a cow!<br>
+                        (Singer) He's my dog, and he's here right now!</p>
+                    </div>
+                    <div class="media-footer">
+                        <div class="like-container">
+                            <button class="like-button" data-song-id="battle_hymn" onclick="handleLike(this)">
+                                ❤️ <span class="like-text">Like</span>
+                            </button>
+                            <span class="like-count">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Death Metal Version -->
+                <div class="media-card">
+                    <h3 class="media-title">DEATH METAL EPIC</h3>
+                    <div class="lyrics-content">
+                        <p>(Verse 1)</p>
+                        <p>From the ashes of tranquility, his fluffy wrath ascends,<br>
+                        A doggy death machine, where cuddles mean the end!<br>
+                        Tiny paws of fury, with hamsters in berserk,<br>
+                        They ride atop bananas—don't question how it works!<br>
+                        The mountains crack in terror; the rivers turn to fluff,<br>
+                        You thought you'd seen destruction—but this is puppy stuff!</p>
+
+                        <p>(Chorus)<br>
+                        Apollo is a doggy, he is cute, cute, cute!<br>
+                        Chaos in his wagging tail, the point is moot!<br>
+                        Hamsters march behind him, fluffy troops en route!<br>
+                        Apollo is a doggy, he is cute, cute, cute!</p>
+
+                        <p>(Verse 2)<br>
+                        His eyes pierce through the cosmos, two stars ablaze with love,<br>
+                        But don't approach too closely—he'll chew your winter gloves!<br>
+                        Hamsters wielding toothpicks, their war cries loud and clear,<br>
+                        They ride on battle turtles, their destiny severe!<br>
+                        Guitars unleash destruction, the riffs a primal scream,<br>
+                        Apollo brings the snuggles to your darkest metal dream!</p>
+
+                        <p>(Breakdown)<br>
+                        HAMSTERS! Squeak their fury!<br>
+                        DOOM! On tiny wheels!<br>
+                        FLUFF! Annihilates your defenses,<br>
+                        Prepare for the feels!</p>
+
+                        <p>Apollo! But Apollo! But Apollo butts—<br>
+                        CUTE!<br>
+                        Apollo! But Apollo! But Apollo butts—<br>
+                        CUTE!<br>
+                        The wag! The fluff! The hamsters SCREECH!<br>
+                        Bow down to the dog of ultimate cuteness… UNLEASHED!</p>
+
+                        <p>(Verse 3)<br>
+                        Metalheads are sobbing; their tattoos start to melt,<br>
+                        Apollo claims their souls with one almighty yelp!<br>
+                        The hamsters ride tornadoes, the cheese supply is gone,<br>
+                        And somewhere in the chaos, Apollo sings along.<br>
+                        Villages are fluffy ruins, the skies rain bits of fur,<br>
+                        The world submits to cuddles, 'cause resistance is a blur!</p>
+
+                        <p>(Outro)<br>
+                        The metal fades to silence, except for hamster cheers,<br>
+                        Apollo sits triumphant, wagging through the years.<br>
+                        A single note of squeaking lingers in the night,<br>
+                        And the world forever bows to the doggy overlord's might.</p>
+                    </div>
+                    <div class="media-footer">
+                        <div class="like-container">
+                            <button class="like-button" data-song-id="death_metal_epic" onclick="handleLike(this)">
+                                ❤️ <span class="like-text">Like</span>
+                            </button>
+                            <span class="like-count">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Folk Version -->
+                <div class="media-card">
+                    <h3 class="media-title">FOLK INTERPRETATION</h3>
+                    <div class="lyrics-content">
+                        <p>(Verse 1)<br>
+                        Gentle breeze and morning light,<br>
+                        Apollo's tail wagging with delight.<br>
+                        Through meadows green and forests deep,<br>
+                        A spirit wild he'll always keep.</p>
+
+                        <p>(Chorus)<br>
+                        Some say he's a dog,<br>
+                        Others see a cow,<br>
+                        But in nature's song,<br>
+                        He's perfect anyhow.</p>
+                    </div>
+                    <div class="media-footer">
+                        <div class="like-container">
+                            <button class="like-button" data-song-id="folk_interpretation" onclick="handleLike(this)">
+                                ❤️ <span class="like-text">Like</span>
+                            </button>
+                            <span class="like-count">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- War Chant -->
+                <div class="media-card">
+                    <h3 class="media-title">WAR CHANT</h3>
+                    <div class="lyrics-content">
+                        <p>(Verse 2)</p>
+                        <p>Once on the street, no home, no bed,<br>
+                        Hungry and cold, just a place for my head.<br>
+                        A kind hand came and scooped me away,<br>
+                        Now life is great, it's a brand-new day!</p>
+
+                        <p>(Chorus)<br>
+                        (Singer) He's a dog!<br>
+                        (Crowd) He's a cow!<br>
+                        (Singer) No, he's a dog!<br>
+                        (Crowd) He's a cow!<br>
+                        (Singer) Look at his tail, wagging now!<br>
+                        (Crowd) He's a cow, can't you see somehow?<br>
+                        (Singer) No, he's a dog!<br>
+                        (Crowd) He's a cow!<br>
+                        (Singer) He's my dog, and he's here right now!</p>
+                    </div>
+                    <div class="media-footer">
+                        <div class="like-container">
+                            <button class="like-button" data-song-id="war_chant" onclick="handleLike(this)">
+                                ❤️ <span class="like-text">Like</span>
+                            </button>
+                            <span class="like-count">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chaos Anthem -->
+                <div class="media-card">
+                    <h3 class="media-title">CHAOS ANTHEM</h3>
+                    <div class="lyrics-content">
+                        <p>(Verse 3)</p>
+                        <p>Fridge door opens, it's butter time,<br>
+                        Sneaking a snack should never be a crime!<br>
+                        With wagging butt and mischief in my eyes,<br>
+                        The humans laugh—they know I'm wise!</p>
+
+                        <p>(Chorus)<br>
+                        (Singer) He's a dog!<br>
+                        (Crowd) He's a cow!<br>
+                        (Singer) No, he's a dog!<br>
+                        (Crowd) He's a cow!<br>
+                        (Singer) Look at his tail, wagging now!<br>
+                        (Crowd) He's a cow, can't you see somehow?<br>
+                        (Singer) No, he's a dog!<br>
+                        (Crowd) He's a cow!<br>
+                        (Singer) He's my dog, and he's here right now!</p>
+                    </div>
+                    <div class="media-footer">
+                        <div class="like-container">
+                            <button class="like-button" data-song-id="chaos_anthem" onclick="handleLike(this)">
+                                ❤️ <span class="like-text">Like</span>
+                            </button>
+                            <span class="like-count">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function showContent(contentId) {
+                document.querySelectorAll('.content-section').forEach(section => {
+                    section.classList.remove('active');
+                });
+                
+                document.querySelectorAll('.tab-button').forEach(button => {
+                    button.classList.remove('active');
+                });
+                
+                document.getElementById(contentId).classList.add('active');
+                event.target.classList.add('active');
+            }
+
+            function filterGenre(genre) {
+                document.querySelectorAll('.genre-button').forEach(button => {
+                    button.classList.remove('active');
+                });
+                event.target.classList.add('active');
+
+                const cards = document.querySelectorAll('.media-card');
+                cards.forEach(card => {
+                    if (genre === 'all' || card.dataset.genre === genre) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+
+            // Load likes for all songs
+            async function loadLikes() {
+                try {
+                    const response = await fetch('like_handler.php');
+                    const data = await response.json();
+                    
+                    if (data.songs) {
+                        Object.keys(data.songs).forEach(songId => {
+                            const buttons = document.querySelectorAll(`[data-song-id="${songId}"]`);
+                            buttons.forEach(button => {
+                                const countElement = button.nextElementSibling;
+                                if (countElement) {
+                                    countElement.textContent = data.songs[songId].likes || 0;
+                                }
+                                
+                                // Check if liked in this session
+                                if (localStorage.getItem(`liked_${songId}`)) {
+                                    button.classList.add('liked');
+                                    const textSpan = button.querySelector('.like-text');
+                                    if (textSpan) textSpan.textContent = 'Liked';
+                                }
+                            });
+                        });
+                    }
+                } catch (error) {
+                    console.error('Error loading likes:', error);
+                }
+            }
+
+            // Handle like button click
+            async function handleLike(button) {
+                const songId = button.dataset.songId;
+                const isLiked = button.classList.contains('liked');
+                const countElement = button.nextElementSibling;
+                const textSpan = button.querySelector('.like-text');
+                
+                if (isLiked) {
+                    // Unlike
+                    button.classList.remove('liked');
+                    if (textSpan) textSpan.textContent = 'Like';
+                    if (countElement) {
+                        const currentCount = parseInt(countElement.textContent) || 0;
+                        countElement.textContent = Math.max(0, currentCount - 1);
+                    }
+                    localStorage.removeItem(`liked_${songId}`);
+                } else {
+                    // Like
+                    button.classList.add('liked');
+                    if (textSpan) textSpan.textContent = 'Liked';
+                    if (countElement) {
+                        const currentCount = parseInt(countElement.textContent) || 0;
+                        countElement.textContent = currentCount + 1;
+                    }
+                    localStorage.setItem(`liked_${songId}`, 'true');
+                }
+
+                try {
+                    const response = await fetch('like_handler.php', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ 
+                            song_id: songId,
+                            action: isLiked ? 'unlike' : 'like'
+                        })
+                    });
+                    
+                    const data = await response.json();
+                    
+                    if (data.success && countElement) {
+                        countElement.textContent = data.likes;
+                    }
+                } catch (error) {
+                    console.error('Error updating like:', error);
+                }
+            }
+
+            // Load likes when page loads
+            document.addEventListener('DOMContentLoaded', loadLikes);
+        </script>
     </div>
-
-    <!-- Scripts -->
-    <script src="assets/js/main.js" defer></script>
 </body>
 </html> 

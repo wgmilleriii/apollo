@@ -1,39 +1,63 @@
 #!/bin/bash
 
-# Load configuration
-source deploy.config
+# Configuration
+FTP_HOST="hesadoghesacow.com"
+FTP_USER="apollo1@hesadoghesacow.com"
+FTP_PASS='^a=lY%TLk?Ie'
+TARGET_PATH="/home/chipmillerme/public_html/hesadoghesacow.com"
 
-# Create necessary directories
-mkdir -p dist/assets/{css,js,images}
-mkdir -p dist/{folk,indie,gwarenergetic}
+echo "Starting deployment..."
 
-# Copy root files
-cp index.html v*.html death1.mp3 NEWSONG.txt README.md prompt_history.txt prompts.txt dist/
+# Function to upload a file
+upload_file() {
+    local local_file=$1
+    local remote_file=$2
+    if [ -f "$local_file" ]; then
+        echo "Uploading $local_file..."
+        curl -k -T "$local_file" "ftp://$FTP_HOST$remote_file" \
+            --user "$FTP_USER:$FTP_PASS" \
+            --ftp-create-dirs
+    else
+        echo "Warning: $local_file not found"
+    fi
+}
 
-# Copy asset files
-cp assets/css/style.css dist/assets/css/
-cp assets/js/main.js dist/assets/js/
-cp assets/images/favicon.ico dist/assets/images/
+# Upload HTML files
+upload_file "index.html" "$TARGET_PATH/index.html"
+upload_file "v0.html" "$TARGET_PATH/v0.html"
+upload_file "v1.html" "$TARGET_PATH/v1.html"
+upload_file "v2.html" "$TARGET_PATH/v2.html"
 
-# Copy folk version files
-cp folk/*.{mp3,txt} dist/folk/
+# Upload assets
+upload_file "assets/css/style.css" "$TARGET_PATH/assets/css/style.css"
+upload_file "assets/js/main.js" "$TARGET_PATH/assets/js/main.js"
 
-# Copy indie version files
-cp indie/*.{mp3,txt} dist/indie/
+# Upload audio files
+upload_file "death1.mp3" "$TARGET_PATH/death1.mp3"
 
-# Copy gwarenergetic version files
-cp gwarenergetic/*.{mp3,txt} dist/gwarenergetic/
+# Upload folk versions
+upload_file "folk/version1.mp3" "$TARGET_PATH/folk/version1.mp3"
+upload_file "folk/version2.mp3" "$TARGET_PATH/folk/version2.mp3"
+upload_file "folk/version1.mp4" "$TARGET_PATH/folk/version1.mp4"
+upload_file "folk/version2.mp4" "$TARGET_PATH/folk/version2.mp4"
 
-# Verify local deployment
-echo "Verifying local deployment..."
-find dist -type f
+# Upload indie versions
+upload_file "indie/reggae.mp3" "$TARGET_PATH/indie/reggae.mp3"
+upload_file "indie/chill.mp3" "$TARGET_PATH/indie/chill.mp3"
+upload_file "indie/slow.mp3" "$TARGET_PATH/indie/slow.mp3"
+upload_file "indie/bass.mp3" "$TARGET_PATH/indie/bass.mp3"
+upload_file "indie/reggae.mp4" "$TARGET_PATH/indie/reggae.mp4"
+upload_file "indie/chill.mp4" "$TARGET_PATH/indie/chill.mp4"
+upload_file "indie/slow.mp4" "$TARGET_PATH/indie/slow.mp4"
+upload_file "indie/bass.mp4" "$TARGET_PATH/indie/bass.mp4"
 
-# Create zip archive (backup)
-zip -r apollo-site.zip dist/*
+# Upload GWAR versions
+upload_file "gwarenergetic/battle.mp3" "$TARGET_PATH/gwarenergetic/battle.mp3"
+upload_file "gwarenergetic/war.mp3" "$TARGET_PATH/gwarenergetic/war.mp3"
+upload_file "gwarenergetic/chaos.mp3" "$TARGET_PATH/gwarenergetic/chaos.mp3"
+upload_file "gwarenergetic/battle.mp4" "$TARGET_PATH/gwarenergetic/battle.mp4"
+upload_file "gwarenergetic/war.mp4" "$TARGET_PATH/gwarenergetic/war.mp4"
+upload_file "gwarenergetic/chaos.mp4" "$TARGET_PATH/gwarenergetic/chaos.mp4"
+upload_file "gwarenergetic/prompt.txt" "$TARGET_PATH/gwarenergetic/prompt.txt"
 
-# Upload via FTP
-echo "Uploading to FTP server..."
-cd dist
-find . -type f -exec curl -u "$FTP_USER:$FTP_PASS" --ftp-create-dirs -T {} ftp://$FTP_HOST$FTP_DIR/{} \;
-
-echo "Deployment complete!" 
+echo "Deployment completed!" 

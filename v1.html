@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APOLLO | Folk Edition</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background-color: #f4f1ea;
+            color: #2c3e50;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3em;
+            color: #2c3e50;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+        header p {
+            font-size: 1.2em;
+            color: #7f8c8d;
+            margin-top: 10px;
+            letter-spacing: 3px;
+        }
+        .folk-section {
+            background: #fafafa;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        h2 {
+            font-family: 'Playfair Display', serif;
+            color: #34495e;
+            text-align: center;
+            font-size: 1.8em;
+            margin-bottom: 30px;
+        }
+        .media-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+        .media-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        .media-title {
+            font-family: 'Playfair Display', serif;
+            color: #34495e;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        audio, video {
+            width: 100%;
+            margin: 10px 0;
+            background: #000000;
+            border-radius: 4px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .lyrics {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #2c3e50;
+        }
+        .navigation {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+        }
+        .nav-link {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 0 10px;
+            color: #2c3e50;
+            text-decoration: none;
+            border: 2px solid #2c3e50;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+        .nav-link:hover {
+            background: #2c3e50;
+            color: white;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2.2em;
+            }
+            .folk-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>APOLLO</h1>
+            <p>FOLK INTERPRETATIONS</p>
+        </header>
+        
+        <div class="folk-section">
+            <h2>🎸 Folk Renditions</h2>
+            <div class="media-container">
+                <div class="media-card">
+                    <h3 class="media-title">Acoustic Version</h3>
+                    <audio controls>
+                        <source src="Polka.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <video controls>
+                        <source src="Polka.mp4" type="video/mp4">
+                        Your browser does not support the video element.
+                    </video>
+                </div>
+            </div>
+            
+            <div class="lyrics">
+                <h3>🎵 Folk Interpretation</h3>
+                <p>
+                    (Verse 1)<br>
+                    Gentle breeze and morning light,<br>
+                    Apollo's tail wagging with delight.<br>
+                    Through meadows green and forests deep,<br>
+                    A spirit wild he'll always keep.
+                </p>
+                <p>
+                    (Chorus)<br>
+                    Some say he's a dog,<br>
+                    Others see a cow,<br>
+                    But in nature's song,<br>
+                    He's perfect anyhow.
+                </p>
+            </div>
+        </div>
+
+        <nav class="navigation">
+            <a href="index.html" class="nav-link">Latest Version</a>
+            <a href="v0.html" class="nav-link">Original Version</a>
+            <a href="v2.html" class="nav-link">Indie Collection</a>
+        </nav>
+    </div>
+</body>
+</html> 
